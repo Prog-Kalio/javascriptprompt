@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="javascript">
+	<title>Assignment</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+</head>
+<body">
+
+
+	<div class="container-fluid">
+		<div style="border:1px solid red; background-color: orange; width: 70%; margin: auto; height: 300px; margin-top: 30px; padding:10px;">
+			<h3>2019/2020 UTME ONLINE RESULT CHECKER</h3>
+			<p>Feedback on Assessment: <span id="score"></span></p>
+			<p style="margin-top: 25px">Have you written exam yet? 
+				<select id="answer-1">
+					<option value="">Please Select</option>
+					<option value="YES">YES</option>
+					<option value="NO">NO</option>
+				</select>
+
+				<select id="answer-2">
+					<option value="">Please Select Exam Center</option>
+					<option value="LAGOS">LAGOS</option>
+					<option value="OTHERS">OTHERS</option>
+				</select>
+
+				<button class="btn btn-info" onclick="
+					var firstResponse = document.getElementById('answer-1').value;
+					var secondResponse = document.getElementById('answer-2').value;
+
+					if ((firstResponse.toUpperCase() == 'YES') && (secondResponse.toUpperCase() == 'LAGOS')) {
+						document.getElementById('score').innerHTML = 'Total Score = 320';
+					}
+
+					else if ((firstResponse.toUpperCase() == '') && (secondResponse.toUpperCase() == '')) {
+						alert('Please make a selection')
+					}
+					
+					else if ((firstResponse.toUpperCase() != 'YES') && (secondResponse.toUpperCase() == '')){
+						alert('How do you need a result when you have not written exams?');
+					}
+
+					else if ((firstResponse.toUpperCase() == '') && (secondResponse.toUpperCase() == 'OTHERS')) {
+						alert('Results are not ready for other states yet!');
+					}
+
+					else {
+						alert('Kindly Contact the Exams Department')
+					}
+				">Get My Result</button>
+			</p>
+
+		</div>
+		
+
+	
+	</div>
+
+
+
+
+	<script type="text/javascript">
+
+
+
+		
+	</script>
+</body>
+</html>
